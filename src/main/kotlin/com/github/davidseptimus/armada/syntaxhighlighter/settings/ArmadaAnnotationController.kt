@@ -2,6 +2,7 @@ package com.github.davidseptimus.armada.syntaxhighlighter.settings
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.Service
+import com.intellij.openapi.components.service
 import com.intellij.openapi.editor.colors.EditorColorsListener
 import com.intellij.openapi.editor.colors.EditorColorsManager
 import com.intellij.openapi.editor.colors.EditorColorsScheme
@@ -48,6 +49,6 @@ class ArmadaAnnotationController : EditorColorsListener {
 
     companion object {
         val instance: ArmadaAnnotationController
-            get() = ApplicationManager.getApplication().getService(ArmadaAnnotationController::class.java)
+            get() = service<ArmadaAnnotationController>()
     }
 }
