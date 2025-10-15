@@ -1,0 +1,51 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.davidseptimus.armada-syntax-highlighter</id>
+    <name>Armada Syntax Highlighter</name>
+    <vendor>David Septimus</vendor>
+    <description>A collection of syntax highlighting enhancements</description>
+
+    <resource-bundle>messages.armadaSyntaxHighlighter</resource-bundle>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Optional language dependencies -->
+    <depends optional="true" config-file="plugin-css.xml">com.intellij.css</depends>
+    <depends optional="true" config-file="plugin-java.xml">com.intellij.java</depends>
+    <depends optional="true" config-file="plugin-javascript.xml">JavaScript</depends>
+    <depends optional="true" config-file="plugin-kotlin.xml">com.intellij.modules.kotlin.k2</depends>
+    <depends optional="true" config-file="plugin-php.xml">com.jetbrains.php</depends>
+    <depends optional="true" config-file="plugin-properties.xml">com.intellij.properties</depends>
+    <depends optional="true" config-file="plugin-python.xml">PythonCore</depends>
+    <depends optional="true" config-file="plugin-shell.xml">com.jetbrains.sh</depends>
+    <depends optional="true" config-file="plugin-sql.xml">com.intellij.database</depends>
+    <depends optional="true" config-file="plugin-rust.xml">com.jetbrains.rust</depends>
+    <depends optional="true" config-file="plugin-yaml.xml">org.jetbrains.plugins.yaml</depends>
+    <depends optional="true" config-file="plugin-zig.xml">com.falsepattern.zigbrains</depends>
+
+    <!-- BEGIN Build-time Dependencies -->
+    <!-- END Build-time Dependencies -->
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <!-- Settings Pages -->
+        <applicationConfigurable
+                parentId="editor"
+                instance="com.github.davidseptimus.armada.syntaxhighlighter.settings.ArmadaSettingsConfigurable"
+                id="com.github.davidseptimus.armada.syntaxhighlighter.settings.ArmadaSettingsConfigurable"
+                key="settings.displayName"/>
+
+        <applicationService
+                serviceImplementation="com.github.davidseptimus.armada.syntaxhighlighter.settings.ArmadaSettingsState"/>
+
+
+        <colorSettingsPage
+                implementation="com.github.davidseptimus.armada.syntaxhighlighter.settings.ArmadaColorSettingsPage"/>
+
+
+        <!-- Mandatory Annotators -->
+        <annotator language="XML" implementationClass="com.github.davidseptimus.armada.syntaxhighlighter.annotators.XmlAnnotator"/>
+
+    </extensions>
+
+</idea-plugin>

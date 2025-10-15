@@ -1,0 +1,24 @@
+<!-- EAP-specific plugin configuration -->
+<!-- This file is only included in EAP builds and provides experimental features -->
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+      <themeProvider
+              id="com.github.davidseptimus.armada.armada-dark-azure"
+              path="themes/armada-dark-azure/armada-dark-azure.theme.json"
+              targetUi="new"
+      />
+
+      <themeProvider
+              id="com.github.davidseptimus.armada.armada-dark-azure-islands"
+              path="themes/armada-dark-azure/armada-dark-azure-islands.theme.json"
+              targetUi="islands"
+      />
+
+      <themeProvider
+              id="com.github.davidseptimus.armada.armada-dark-azure-classic-ui"
+              path="themes/armada-dark-azure/armada-dark-azure-classic-ui.theme.json"
+              targetUi="classic"
+      />
+  </extensions>
+</idea-plugin>
+
