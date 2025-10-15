@@ -136,82 +136,81 @@ internal class ArmadaColorSettingsPage : ColorSettingsPage {
         return message("colorSettings.displayName")
     }
 
-    companion object {
-        private val DESCRIPTORS: Array<AttributesDescriptor> = arrayOf<AttributesDescriptor>(
-            AttributesDescriptor(message("colorSettings.css.percent"), TextAttributeKeys.CSS_PERCENT),
-            AttributesDescriptor(message("colorSettings.css.identifierTerm"), TextAttributeKeys.CSS_IDENTIFIER_TERM),
-            AttributesDescriptor(
-                message("colorSettings.java.annotationDeclaration"),
-                TextAttributeKeys.JAVA_ANNOTATION_DECLARATION
-            ),
-            AttributesDescriptor(
-                message("colorSettings.javascript.functionDeclarationIdentifier"),
-                TextAttributeKeys.JAVASCRIPT_FUNCTION_DECLARATION_IDENTIFIER
-            ),
-            AttributesDescriptor(
-                message("colorSettings.javascript.thisIdentifier"),
-                TextAttributeKeys.JAVASCRIPT_THIS_IDENTIFIER
-            ),
-            AttributesDescriptor(message("colorSettings.kotlin.labelAt"), TextAttributeKeys.KOTLIN_LABEL_AT),
-            AttributesDescriptor(
-                message("colorSettings.php.aliasIdentifierDeclaration"),
-                TextAttributeKeys.PHP_ALIAS_IDENTIFIER_DECLARATION
-            ),
-            AttributesDescriptor(message("colorSettings.php.classReference"), TextAttributeKeys.PHP_CLASS_REFERENCE),
-            AttributesDescriptor(
-                message("colorSettings.php.classSelfReference"),
-                TextAttributeKeys.PHP_CLASS_SELF_REFERENCE
-            ),
-            AttributesDescriptor(
-                message("colorSettings.php.gotoLabelIdentifier"),
-                TextAttributeKeys.PHP_GOTO_LABEL_IDENTIFIER
-            ),
-            AttributesDescriptor(
-                message("colorSettings.properties.stringLiteralValue"),
-                TextAttributeKeys.PROPERTIES_STRING_LITERAL_VALUE
-            ),
-            AttributesDescriptor(
-                message("colorSettings.python.typeAnnotation"),
-                TextAttributeKeys.PYTHON_TYPE_ANNOTATION
-            ),
-            AttributesDescriptor(
-                message("colorSettings.rust.attributePunctuation"),
-                TextAttributeKeys.RUST_ATTRIBUTE_PUNCTUATION
-            ),
-            AttributesDescriptor(message("colorSettings.rust.boolean"), TextAttributeKeys.RUST_BOOLEAN),
-            AttributesDescriptor(message("colorSettings.shell.letCommand"), TextAttributeKeys.BASH_LET_COMMAND),
-            AttributesDescriptor(
-                message("colorSettings.shell.subshellCommandParentheses"),
-                TextAttributeKeys.BASH_SUBSHELL_COMMAND_PARENTHESES
-            ),
-            AttributesDescriptor(
-                message("colorSettings.sql.symbolicOperators"),
-                TextAttributeKeys.SQL_SYMBOLIC_OPERATORS
-            ),
-            AttributesDescriptor(
-                message("colorSettings.sql.foreignKeyDefinition"),
-                TextAttributeKeys.SQL_FOREIGN_KEY_DEFINITION
-            ),
-            AttributesDescriptor(
-                message("colorSettings.sql.primaryKeyDefinition"),
-                TextAttributeKeys.SQL_PRIMARY_KEY_DEFINITION
-            ),
-            AttributesDescriptor(
-                message("colorSettings.sql.referenceIdentifier"),
-                TextAttributeKeys.SQL_REFERENCE_IDENTIFIER
-            ),
-            AttributesDescriptor(
-                message("colorSettings.sql.schemaTableIdentifier"),
-                TextAttributeKeys.SQL_SCHEMA_TABLE_IDENTIFIER
-            ),
-            AttributesDescriptor(message("colorSettings.xml.doctype"), TextAttributeKeys.XML_DOCTYPE),
-            AttributesDescriptor(message("colorSettings.yaml.alias"), TextAttributeKeys.YAML_ALIAS),
-            AttributesDescriptor(message("colorSettings.yaml.builtin"), TextAttributeKeys.YAML_BUILTIN),
-            AttributesDescriptor(message("colorSettings.zig.fieldType"), TextAttributeKeys.ZIG_FIELD_TYPE),
-            AttributesDescriptor(
-                message("colorSettings.zig.returnTypeIdentifier"),
-                TextAttributeKeys.ZIG_RETURN_TYPE_IDENTIFIER
-            ),
-        )
-    }
 }
+
+private val DESCRIPTORS: Array<AttributesDescriptor> = arrayOf(
+    AttributesDescriptor(message("colorSettings.css.percent"), TextAttributeKeys.CSS_PERCENT),
+    AttributesDescriptor(message("colorSettings.css.identifierTerm"), TextAttributeKeys.CSS_IDENTIFIER_TERM),
+    AttributesDescriptor(
+        message("colorSettings.java.annotationDeclaration"),
+        TextAttributeKeys.JAVA_ANNOTATION_DECLARATION
+    ),
+    AttributesDescriptor(
+        message("colorSettings.javascript.functionDeclarationIdentifier"),
+        TextAttributeKeys.JAVASCRIPT_FUNCTION_DECLARATION_IDENTIFIER
+    ),
+    AttributesDescriptor(
+        message("colorSettings.javascript.thisIdentifier"),
+        TextAttributeKeys.JAVASCRIPT_THIS_IDENTIFIER
+    ),
+    AttributesDescriptor(message("colorSettings.kotlin.labelAt"), TextAttributeKeys.KOTLIN_LABEL_AT),
+    AttributesDescriptor(
+        message("colorSettings.php.aliasIdentifierDeclaration"),
+        TextAttributeKeys.PHP_ALIAS_IDENTIFIER_DECLARATION
+    ),
+    AttributesDescriptor(message("colorSettings.php.classReference"), TextAttributeKeys.PHP_CLASS_REFERENCE),
+    AttributesDescriptor(
+        message("colorSettings.php.classSelfReference"),
+        TextAttributeKeys.PHP_CLASS_SELF_REFERENCE
+    ),
+    AttributesDescriptor(
+        message("colorSettings.php.gotoLabelIdentifier"),
+        TextAttributeKeys.PHP_GOTO_LABEL_IDENTIFIER
+    ),
+    AttributesDescriptor(
+        message("colorSettings.properties.stringLiteralValue"),
+        TextAttributeKeys.PROPERTIES_STRING_LITERAL_VALUE
+    ),
+    AttributesDescriptor(
+        message("colorSettings.python.typeAnnotation"),
+        TextAttributeKeys.PYTHON_TYPE_ANNOTATION
+    ),
+    AttributesDescriptor(
+        message("colorSettings.rust.attributePunctuation"),
+        TextAttributeKeys.RUST_ATTRIBUTE_PUNCTUATION
+    ),
+    AttributesDescriptor(message("colorSettings.rust.boolean"), TextAttributeKeys.RUST_BOOLEAN),
+    AttributesDescriptor(message("colorSettings.shell.letCommand"), TextAttributeKeys.BASH_LET_COMMAND),
+    AttributesDescriptor(
+        message("colorSettings.shell.subshellCommandParentheses"),
+        TextAttributeKeys.BASH_SUBSHELL_COMMAND_PARENTHESES
+    ),
+    AttributesDescriptor(
+        message("colorSettings.sql.symbolicOperators"),
+        TextAttributeKeys.SQL_SYMBOLIC_OPERATORS
+    ),
+    AttributesDescriptor(
+        message("colorSettings.sql.foreignKeyDefinition"),
+        TextAttributeKeys.SQL_FOREIGN_KEY_DEFINITION
+    ),
+    AttributesDescriptor(
+        message("colorSettings.sql.primaryKeyDefinition"),
+        TextAttributeKeys.SQL_PRIMARY_KEY_DEFINITION
+    ),
+    AttributesDescriptor(
+        message("colorSettings.sql.referenceIdentifier"),
+        TextAttributeKeys.SQL_REFERENCE_IDENTIFIER
+    ),
+    AttributesDescriptor(
+        message("colorSettings.sql.schemaTableIdentifier"),
+        TextAttributeKeys.SQL_SCHEMA_TABLE_IDENTIFIER
+    ),
+    AttributesDescriptor(message("colorSettings.xml.doctype"), TextAttributeKeys.XML_DOCTYPE),
+    AttributesDescriptor(message("colorSettings.yaml.alias"), TextAttributeKeys.YAML_ALIAS),
+    AttributesDescriptor(message("colorSettings.yaml.builtin"), TextAttributeKeys.YAML_BUILTIN),
+    AttributesDescriptor(message("colorSettings.zig.fieldType"), TextAttributeKeys.ZIG_FIELD_TYPE),
+    AttributesDescriptor(
+        message("colorSettings.zig.returnTypeIdentifier"),
+        TextAttributeKeys.ZIG_RETURN_TYPE_IDENTIFIER
+    ),
+)
