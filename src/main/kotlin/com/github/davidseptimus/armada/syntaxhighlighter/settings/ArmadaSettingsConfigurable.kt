@@ -1,6 +1,6 @@
 package com.github.davidseptimus.armada.syntaxhighlighter.settings
 
-import com.github.davidseptimus.armada.syntaxhighlighter.settings.ArmadaSyntaxHighlighterBundle.message
+import com.github.davidseptimus.armada.syntaxhighlighter.ArmadaSyntaxHighlighterBundle.message
 import com.intellij.openapi.options.Configurable
 import com.intellij.ui.components.JBCheckBox
 import com.intellij.ui.components.JBLabel

@@ -1,6 +1,6 @@
 package com.github.davidseptimus.armada.syntaxhighlighter.settings
 
-import com.github.davidseptimus.armada.syntaxhighlighter.settings.ArmadaSyntaxHighlighterBundle.message
+import com.github.davidseptimus.armada.syntaxhighlighter.ArmadaSyntaxHighlighterBundle.message
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.openapi.fileTypes.PlainSyntaxHighlighter

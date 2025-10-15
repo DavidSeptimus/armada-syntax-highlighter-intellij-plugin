@@ -1,4 +1,4 @@
-package com.github.davidseptimus.armada.syntaxhighlighter.settings
+package com.github.davidseptimus.armada.syntaxhighlighter
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.PropertyKey
