@@ -11,6 +11,11 @@
 ### Removed
 
 - Removed JavaScript property reference annotation
+- Removed Kotlin label annotation
+
+### Fixed
+
+- Dependency on potentially unavailable plugins when used outside IntelliJ IDEA Ultimate Edition
 
 ### Changed
 
