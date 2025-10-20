@@ -13,7 +13,6 @@
     <depends optional="true" config-file="plugin-css.xml">com.intellij.css</depends>
     <depends optional="true" config-file="plugin-java.xml">com.intellij.java</depends>
     <depends optional="true" config-file="plugin-javascript.xml">JavaScript</depends>
-    <depends optional="true" config-file="plugin-kotlin.xml">com.intellij.modules.kotlin.k2</depends>
     <depends optional="true" config-file="plugin-php.xml">com.jetbrains.php</depends>
     <depends optional="true" config-file="plugin-properties.xml">com.intellij.properties</depends>
     <depends optional="true" config-file="plugin-python.xml">PythonCore</depends>
@@ -41,7 +40,6 @@
 
         <colorSettingsPage
                 implementation="com.github.davidseptimus.armada.syntaxhighlighter.settings.ArmadaColorSettingsPage"/>
-
 
         <!-- Mandatory Annotators -->
         <annotator language="XML" implementationClass="com.github.davidseptimus.armada.syntaxhighlighter.annotators.XmlAnnotator"/>

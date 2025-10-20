@@ -5,7 +5,7 @@ import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.psi.JavaTokenType
 import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiElement
-import org.rust.lang.core.psi.ext.elementType
+import com.intellij.psi.util.elementType
 
 class JavaAnnotator : BaseArmadaAnnotator() {
 

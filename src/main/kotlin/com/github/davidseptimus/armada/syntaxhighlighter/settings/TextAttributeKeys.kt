@@ -2,7 +2,6 @@ package com.github.davidseptimus.armada.syntaxhighlighter.settings
 
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
-import com.intellij.sql.editor.SqlColors
 
 object TextAttributeKeys {
     val CSS_IDENTIFIER_TERM: TextAttributesKey = TextAttributesKey.createTextAttributesKey("CSS.TERM_IDENTIFIER")
@@ -14,7 +13,6 @@ object TextAttributeKeys {
     val JAVASCRIPT_FUNCTION_DECLARATION_IDENTIFIER: TextAttributesKey =
         TextAttributesKey.createTextAttributesKey("JS.FUNCTION_DECLARATION_IDENTIFIER")
     val JAVASCRIPT_THIS_IDENTIFIER: TextAttributesKey = TextAttributesKey.createTextAttributesKey("JS.THIS_IDENTIFIER")
-    val KOTLIN_LABEL_AT: TextAttributesKey = TextAttributesKey.createTextAttributesKey("KOTLIN_LABEL_AT")
     val PHP_CLASS_REFERENCE: TextAttributesKey = TextAttributesKey.createTextAttributesKey("PHP_CLASS_REFERENCE")
     val PHP_ALIAS_IDENTIFIER_DECLARATION: TextAttributesKey =
         TextAttributesKey.createTextAttributesKey("PHP_ALIAS_IDENTIFIER_DECLARATION")
@@ -46,7 +44,7 @@ object TextAttributeKeys {
     val SQL_PRIMARY_KEY_DEFINITION: TextAttributesKey =
         TextAttributesKey.createTextAttributesKey("SQL_PRIMARY_KEY_DEFINITION")
     val SQL_SYMBOLIC_OPERATORS: TextAttributesKey =
-        TextAttributesKey.createTextAttributesKey("SQL_SYMBOLIC_OPERATORS", SqlColors.SQL_KEYWORD)
+        TextAttributesKey.createTextAttributesKey("SQL_SYMBOLIC_OPERATORS")
     val SQL_FOREIGN_KEY_DEFINITION: TextAttributesKey =
         TextAttributesKey.createTextAttributesKey("SQL_FOREIGN_KEY_DEFINITION", SQL_PRIMARY_KEY_DEFINITION)
     val SQL_SCHEMA_TABLE_IDENTIFIER: TextAttributesKey =

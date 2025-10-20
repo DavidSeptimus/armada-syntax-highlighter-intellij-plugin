@@ -3,12 +3,8 @@ package com.github.davidseptimus.armada.syntaxhighlighter.annotators
 import com.github.davidseptimus.armada.syntaxhighlighter.settings.TextAttributeKeys
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.psi.PsiElement
-import com.intellij.sql.dialects.redshift.RsTypes
-import org.rust.lang.core.psi.RsInnerAttr
-import org.rust.lang.core.psi.RsMetaItem
-import org.rust.lang.core.psi.RsMetaItemArgs
-import org.rust.lang.core.psi.RsOuterAttr
-import org.rust.lang.core.psi.ext.elementType
+import com.intellij.psi.util.elementType
+import org.rust.lang.core.psi.*
 
 
 class RustAnnotator : BaseArmadaAnnotator() {
@@ -23,7 +19,7 @@ class RustAnnotator : BaseArmadaAnnotator() {
         element: PsiElement,
         holder: AnnotationHolder
     ): Boolean {
-        if (element.elementType == RsTypes.RS_BOOLEAN_LITERAL) {
+        if (element.elementType == RsElementTypes.BOOL_LITERAL) {
             highlightElement(element, holder, TextAttributeKeys.RUST_BOOLEAN)
             return true
         }

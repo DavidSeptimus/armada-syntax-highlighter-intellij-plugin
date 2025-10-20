@@ -35,13 +35,6 @@ internal class ArmadaColorSettingsPage : ColorSettingsPage {
                 function <js_function_decl>myFunc</js_function_decl>() {} <comment>// JavaScript Function Declaration Identifier</comment>
                 <js_this>this</js_this> <comment>// JavaScript This Identifier</comment>
 
-                <comment>// Kotlin</comment>
-                ints.forEach lit<kotlin_label>@</kotlin_label> {                 <comment>// Kotlin Label @</comment>
-                    if (it == null) return <kotlin_label>@</kotlin_label>lit
-                        println(it + ref)
-                    }
-                }
-
                 <comment>// PHP</comment>
                 use SomeType as <php_alias>MyType</php_alias>; <comment>// PHP Alias Identifier Declaration</comment>
                 ${'$'}def .=  <php_self>self</php_self>::magic; <comment>// PHP Class Self Reference</comment>
@@ -75,7 +68,6 @@ internal class ArmadaColorSettingsPage : ColorSettingsPage {
                 <comment>// YAML</comment>
                 a: <yaml_alias>*alias</yaml_alias> <comment>// YAML Alias</comment>
                 b: <yaml_builtin>true</yaml_builtin> <yaml_builtin>~</yaml_builtin> <comment>// YAML Builtin</comment>
-                
 
                 <comment>// Zig</comment>
                 field: <zig_field>?*Node</zig_field> <comment>// Zig Field/Argument Type</comment>
@@ -97,7 +89,6 @@ internal class ArmadaColorSettingsPage : ColorSettingsPage {
                 TextAttributeKeys.JAVASCRIPT_FUNCTION_DECLARATION_IDENTIFIER
             ),
             Map.entry<String, TextAttributesKey>("js_this", TextAttributeKeys.JAVASCRIPT_THIS_IDENTIFIER),
-            Map.entry<String, TextAttributesKey>("kotlin_label", TextAttributeKeys.KOTLIN_LABEL_AT),
             Map.entry<String, TextAttributesKey>("php_alias", TextAttributeKeys.PHP_ALIAS_IDENTIFIER_DECLARATION),
             Map.entry<String, TextAttributesKey>("php_class", TextAttributeKeys.PHP_CLASS_REFERENCE),
             Map.entry<String, TextAttributesKey>("php_self", TextAttributeKeys.PHP_CLASS_SELF_REFERENCE),
@@ -153,7 +144,6 @@ private val DESCRIPTORS: Array<AttributesDescriptor> = arrayOf(
         message("colorSettings.javascript.thisIdentifier"),
         TextAttributeKeys.JAVASCRIPT_THIS_IDENTIFIER
     ),
-    AttributesDescriptor(message("colorSettings.kotlin.labelAt"), TextAttributeKeys.KOTLIN_LABEL_AT),
     AttributesDescriptor(
         message("colorSettings.php.aliasIdentifierDeclaration"),
         TextAttributeKeys.PHP_ALIAS_IDENTIFIER_DECLARATION
