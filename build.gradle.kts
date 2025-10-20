@@ -79,6 +79,22 @@ dependencies {
 
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
 intellijPlatform {
+    // Set custom cache directory for IntelliJ IDEs
+    // Default: ~/idea-sandbox/downloads, overridable via INTELLIJ_PLATFORM_IDES_CACHE env var or gradle property
+    caching {
+        ides {
+            enabled.set(true)
+            path.set(
+                layout.dir(
+                providers.environmentVariable("INTELLIJ_PLATFORM_IDES_CACHE")
+                    .orElse("${System.getProperty("user.home")}/idea-sandbox/downloads")
+                    .orElse(providers.gradleProperty("org.jetbrains.intellij.platform.intellijPlatformIdesCache"))
+                    .map { file(it).absoluteFile }
+
+            ))
+        }
+    }
+
     pluginConfiguration {
         name = providers.gradleProperty("pluginName")
         version = providers.gradleProperty("pluginVersion")
