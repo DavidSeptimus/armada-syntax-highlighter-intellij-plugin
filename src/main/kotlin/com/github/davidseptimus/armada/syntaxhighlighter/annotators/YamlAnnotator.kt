@@ -3,7 +3,8 @@ package com.github.davidseptimus.armada.syntaxhighlighter.annotators
 import com.github.davidseptimus.armada.syntaxhighlighter.settings.TextAttributeKeys
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.psi.PsiElement
-import org.jetbrains.yaml.psi.YAMLAlias
+import com.intellij.psi.util.elementType
+import org.jetbrains.yaml.YAMLTokenTypes
 import org.jetbrains.yaml.psi.YAMLScalar
 
 class YamlAnnotator : BaseArmadaAnnotator() {
@@ -11,7 +12,7 @@ class YamlAnnotator : BaseArmadaAnnotator() {
     override fun doAnnotate(element: PsiElement, holder: AnnotationHolder) {
         when {
             // Highlight aliases (e.g., *params)
-            element is YAMLAlias -> {
+            element.elementType == YAMLTokenTypes.ALIAS -> {
                 highlightElement(element, holder, TextAttributeKeys.YAML_ALIAS)
             }
 

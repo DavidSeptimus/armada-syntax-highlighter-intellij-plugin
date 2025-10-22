@@ -66,7 +66,7 @@ internal class ArmadaColorSettingsPage : ColorSettingsPage {
                 create table <sql_schema_table>my_table</sql_schema_table> (id int, name varchar(100)); <comment>// SQL Schema Table Identifier</comment>
 
                 <comment>// YAML</comment>
-                a: <yaml_alias>*alias</yaml_alias> <comment>// YAML Alias</comment>
+                a: *<yaml_alias>alias</yaml_alias> <comment>// YAML Alias</comment>
                 b: <yaml_builtin>true</yaml_builtin> <yaml_builtin>~</yaml_builtin> <comment>// YAML Builtin</comment>
 
                 <comment>// Zig</comment>
