@@ -4,6 +4,16 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Increased maximum supported IDE version to `261.*`
+
+### Removed
+
+- Removed * from yaml alias highligt
+
+## [1.0.0] - 2025-10-20
+
 ### Added
 
 - Added YAML boolean and null value annotation
