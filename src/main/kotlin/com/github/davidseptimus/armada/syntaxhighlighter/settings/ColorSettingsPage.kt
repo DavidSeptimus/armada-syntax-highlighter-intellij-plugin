@@ -74,7 +74,14 @@ internal class ArmadaColorSettingsPage : ColorSettingsPage {
                 pub fn myFunc() <zig_return>SomeError.Variant!void</zig_return> { <comment>// Zig Return Type Identifier</comment>
                     return null;
                 }
-                
+
+                <comment>// Log file</comment>
+                2026-04-12 10:15:00 <log_verbose>TRACE</log_verbose> started request pipeline
+                2026-04-12 10:15:00 <log_debug>DEBUG</log_debug> resolving dependency graph
+                2026-04-12 10:15:01 <log_info>INFO</log_info> server listening on :8080
+                2026-04-12 10:15:02 <log_warning>WARN</log_warning> slow query: 812ms
+                2026-04-12 10:15:03 <log_error>ERROR</log_error> connection refused
+
                 """.trimIndent()
     }
 
@@ -111,7 +118,12 @@ internal class ArmadaColorSettingsPage : ColorSettingsPage {
             Map.entry<String, TextAttributesKey>("yaml_alias", TextAttributeKeys.YAML_ALIAS),
             Map.entry<String, TextAttributesKey>("yaml_builtin", TextAttributeKeys.YAML_BUILTIN),
             Map.entry<String, TextAttributesKey>("zig_field", TextAttributeKeys.ZIG_FIELD_TYPE),
-            Map.entry<String, TextAttributesKey>("zig_return", TextAttributeKeys.ZIG_RETURN_TYPE_IDENTIFIER)
+            Map.entry<String, TextAttributesKey>("zig_return", TextAttributeKeys.ZIG_RETURN_TYPE_IDENTIFIER),
+            Map.entry<String, TextAttributesKey>("log_info", TextAttributeKeys.LOG_INFO),
+            Map.entry<String, TextAttributesKey>("log_warning", TextAttributeKeys.LOG_WARNING),
+            Map.entry<String, TextAttributesKey>("log_error", TextAttributeKeys.LOG_ERROR),
+            Map.entry<String, TextAttributesKey>("log_debug", TextAttributeKeys.LOG_DEBUG),
+            Map.entry<String, TextAttributesKey>("log_verbose", TextAttributeKeys.LOG_VERBOSE)
         )
     }
 
@@ -203,4 +215,9 @@ private val DESCRIPTORS: Array<AttributesDescriptor> = arrayOf(
         message("colorSettings.zig.returnTypeIdentifier"),
         TextAttributeKeys.ZIG_RETURN_TYPE_IDENTIFIER
     ),
+    AttributesDescriptor(message("colorSettings.logging.info"), TextAttributeKeys.LOG_INFO),
+    AttributesDescriptor(message("colorSettings.logging.warning"), TextAttributeKeys.LOG_WARNING),
+    AttributesDescriptor(message("colorSettings.logging.error"), TextAttributeKeys.LOG_ERROR),
+    AttributesDescriptor(message("colorSettings.logging.debug"), TextAttributeKeys.LOG_DEBUG),
+    AttributesDescriptor(message("colorSettings.logging.verbose"), TextAttributeKeys.LOG_VERBOSE),
 )

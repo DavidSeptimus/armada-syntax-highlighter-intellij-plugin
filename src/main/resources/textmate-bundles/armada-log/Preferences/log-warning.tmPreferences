@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Armada Log Warning</string>
+	<key>scope</key>
+	<string>log.warning</string>
+	<key>settings</key>
+	<dict>
+		<key>fontStyle</key>
+		<string></string>
+	</dict>
+	<key>uuid</key>
+	<string>00F5E8E3-574D-446E-AD08-33CEA425D441</string>
+</dict>
+</plist>

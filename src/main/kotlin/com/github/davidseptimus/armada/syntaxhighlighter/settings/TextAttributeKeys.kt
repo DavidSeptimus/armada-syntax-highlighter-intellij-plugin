@@ -49,4 +49,15 @@ object TextAttributeKeys {
         TextAttributesKey.createTextAttributesKey("SQL_FOREIGN_KEY_DEFINITION", SQL_PRIMARY_KEY_DEFINITION)
     val SQL_SCHEMA_TABLE_IDENTIFIER: TextAttributesKey =
         TextAttributesKey.createTextAttributesKey("SQL_SCHEMA_TABLE_IDENTIFIER")
+
+    // TextMate custom-rule keys generated for the `armada-log` bundle's scopes. Registering the
+    // scopes in a bundle causes the TextMate plugin to materialize TextAttributesKeys with these
+    // exact names (see TextMateTextAttributesAdapter). Referencing them here lets the settings UI
+    // surface them and lets scheme XMLs override DIFF_INSERTED/DIFF_DELETED/DIFF_MODIFIED
+    // backgrounds that would otherwise bleed through for log-level keywords.
+    val LOG_INFO: TextAttributesKey = TextAttributesKey.createTextAttributesKey("TextMateCustomRule_log.info")
+    val LOG_WARNING: TextAttributesKey = TextAttributesKey.createTextAttributesKey("TextMateCustomRule_log.warning")
+    val LOG_ERROR: TextAttributesKey = TextAttributesKey.createTextAttributesKey("TextMateCustomRule_log.error")
+    val LOG_DEBUG: TextAttributesKey = TextAttributesKey.createTextAttributesKey("TextMateCustomRule_log.debug")
+    val LOG_VERBOSE: TextAttributesKey = TextAttributesKey.createTextAttributesKey("TextMateCustomRule_log.verbose")
 }
