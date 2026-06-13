@@ -12,6 +12,10 @@
 
 - Removed * from yaml alias highligt
 
+### Fixed
+
+- No longer bundles the Kotlin standard library; the IDE-provided stdlib is used instead, avoiding classloader conflicts with the platform and with other plugins (a stale bundled stdlib could shadow the platform's and break coroutine debug probes on 2026.1)
+
 ## [1.0.0] - 2025-10-20
 
 ### Added
