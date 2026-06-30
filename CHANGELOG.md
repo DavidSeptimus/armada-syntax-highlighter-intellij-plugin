@@ -2,7 +2,17 @@
 
 # Armada Syntax Highlighter Changelog
 
-## [Unreleased]
+## [1.2.0] - 2026-06-29
+
+### Added
+
+- Added support for log level colors
+
+### Removed
+
+- Maximum IDE version cap
+
+## [1.1.0] - 2026-01-24
 
 ### Changed
 
